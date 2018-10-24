@@ -29,7 +29,7 @@ RUN swupd bundle-add --skip-diskspace-check git vim \
 
 
 RUN ln -s -f /usr/bin/python3 /usr/bin/python
-RUN ln -s -f ./usr/bin/pip3 /usr/bin/pip
+RUN ln -s -f /usr/bin/pip3 /usr/bin/pip
 
 
 RUN pip install \
