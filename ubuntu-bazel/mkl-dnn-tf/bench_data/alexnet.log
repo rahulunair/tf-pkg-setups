@@ -1,0 +1,43 @@
+[rahul@runnikri-desk benchmarks] $ perf record -F 50  -o perf_tf_dnn.data /usr/bin/python3 scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py --batch_size=32 --model=alexnet --data_format=NHWC --device=cpu
+2018-10-24 13:45:18.117684: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2018-10-24 13:45:18.119711: I tensorflow/core/common_runtime/process_util.cc:69] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+TensorFlow:  1.11
+Model:       alexnet
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  32 global
+             32.0 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+W1024 13:45:18.353525 139717514237440 tf_logging.py:125] From /home/rahul/Downloads/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1888: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+I1024 13:45:18.553990 139717514237440 tf_logging.py:115] Running local_init_op.
+I1024 13:45:18.574292 139717514237440 tf_logging.py:115] Done running local_init_op.
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 41.9 +/- 0.0 (jitter = 0.0)	7.259
+10	images/sec: 51.7 +/- 3.5 (jitter = 17.0)	7.258
+20	images/sec: 52.8 +/- 2.3 (jitter = 13.2)	7.259
+30	images/sec: 53.1 +/- 1.8 (jitter = 13.6)	7.258
+40	images/sec: 53.7 +/- 1.6 (jitter = 13.7)	7.259
+50	images/sec: 53.5 +/- 1.5 (jitter = 14.2)	7.259
+60	images/sec: 53.5 +/- 1.4 (jitter = 13.9)	7.259
+70	images/sec: 54.2 +/- 1.3 (jitter = 13.7)	7.259
+80	images/sec: 54.2 +/- 1.2 (jitter = 13.9)	7.259
+90	images/sec: 54.3 +/- 1.1 (jitter = 13.8)	7.259
+100	images/sec: 53.9 +/- 1.0 (jitter = 13.2)	7.259
+----------------------------------------------------------------
+total images/sec: 53.90
+----------------------------------------------------------------
+[ perf record: Woken up 1 times to write data ]
+[ perf record: Captured and wrote 2.225 MB perf_tf_dnn.data (54160 samples) ]
+
