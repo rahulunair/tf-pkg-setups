@@ -1,0 +1,43 @@
+(py36) root@94e8804f88c2 /root/wheels/benchmarks # python scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py --batch_size=32 --model=alexnet --data_format=NHWC --device=cpu
+/root/wheels/benchmarks/py36/lib/python3.7/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.6 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.7
+  return f(*args, **kwds)
+2018-10-24 22:13:31.330272: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2018-10-24 22:13:31.332245: I tensorflow/core/common_runtime/process_util.cc:69] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+TensorFlow:  1.11
+Model:       alexnet
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  32 global
+             32.0 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+W1024 22:13:31.598233 140135439986816 tf_logging.py:125] From /root/wheels/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1888: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+I1024 22:13:31.796950 140135439986816 tf_logging.py:115] Running local_init_op.
+I1024 22:13:31.815841 140135439986816 tf_logging.py:115] Done running local_init_op.
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 53.6 +/- 0.0 (jitter = 0.0)	nan
+10	images/sec: 54.1 +/- 3.0 (jitter = 9.6)	nan
+20	images/sec: 53.5 +/- 2.0 (jitter = 10.6)	nan
+30	images/sec: 51.0 +/- 1.6 (jitter = 9.8)	nan
+40	images/sec: 51.0 +/- 1.3 (jitter = 7.9)	nan
+50	images/sec: 51.8 +/- 1.2 (jitter = 9.5)	nan
+60	images/sec: 52.0 +/- 1.1 (jitter = 9.1)	nan
+70	images/sec: 52.0 +/- 1.0 (jitter = 9.4)	nan
+80	images/sec: 51.6 +/- 1.0 (jitter = 10.1)	nan
+90	images/sec: 51.9 +/- 0.9 (jitter = 9.6)	nan
+100	images/sec: 51.9 +/- 0.9 (jitter = 9.8)	nan
+----------------------------------------------------------------
+total images/sec: 51.92
+----------------------------------------------------------------
+

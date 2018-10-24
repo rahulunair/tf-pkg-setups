@@ -1,0 +1,10 @@
+root@1d9d00e05938:/tmp/tensorflow_pkg# history
+    1  ls
+    2  cd tensorflow-1.11.0/
+    3  ./configure 
+    4  bazel build --config=mkl_open_source_only -s -c opt //tensorflow/tools/pip_package:build_pip_package
+    5  ./bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
+    6  cd /tmp/tensorflow_pkg/
+    7  ls -lhrt
+    8  python -m http.server
+    9  history

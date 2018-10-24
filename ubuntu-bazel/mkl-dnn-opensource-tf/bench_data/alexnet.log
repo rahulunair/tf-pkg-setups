@@ -1,0 +1,41 @@
+rahul@runnikri-desk benchmarks] $ perf record -F 50  -o perf_mkl_open_tf.data /usr/bin/python3 scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py --batch_size=32 --model=alexnet --data_format=NHWC --device=cpu
+2018-10-24 16:09:51.631969: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+TensorFlow:  1.11
+Model:       alexnet
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  32 global
+             32.0 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+W1024 16:09:52.019421 140414659671552 tf_logging.py:125] From /home/rahul/Downloads/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1888: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+I1024 16:09:52.250181 140414659671552 tf_logging.py:115] Running local_init_op.
+I1024 16:09:52.264313 140414659671552 tf_logging.py:115] Done running local_init_op.
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 32.8 +/- 0.0 (jitter = 0.0)	nan
+10	images/sec: 33.2 +/- 0.1 (jitter = 0.5)	nan
+20	images/sec: 33.2 +/- 0.1 (jitter = 0.5)	nan
+30	images/sec: 33.1 +/- 0.1 (jitter = 0.5)	nan
+40	images/sec: 33.2 +/- 0.1 (jitter = 0.5)	nan
+50	images/sec: 33.2 +/- 0.1 (jitter = 0.6)	nan
+60	images/sec: 33.1 +/- 0.1 (jitter = 0.6)	nan
+70	images/sec: 33.1 +/- 0.1 (jitter = 0.6)	nan
+80	images/sec: 33.0 +/- 0.1 (jitter = 0.8)	nan
+90	images/sec: 33.0 +/- 0.1 (jitter = 0.8)	nan
+100	images/sec: 33.0 +/- 0.1 (jitter = 0.7)	nan
+----------------------------------------------------------------
+total images/sec: 32.97
+----------------------------------------------------------------
+[ perf record: Woken up 1 times to write data ]
+

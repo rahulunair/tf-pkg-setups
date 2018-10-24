@@ -1,0 +1,9 @@
+# renamed the wheel
+mv tensorflow-1.11.0-cp36-cp36m-linux_x86_64.whl tensorflow-1.11.0-cp37-cp37m-linux_x86_64.whl
+
+# created virtualenv
+virtualenv py36 && source py36/bin/activate
+
+# force install using pip
+pip install  --force-reinstall tensorflow-1.11.0-cp37-cp37m-linux_x86_64.whl
+pip install nltk  # only for running the benchmarks

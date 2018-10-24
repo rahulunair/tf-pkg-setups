@@ -1,0 +1,42 @@
+root@884fd587170b /root/wheels/benchmarks # python scripts/tf_cnn_benchmarks/tf_cnn_benchmarks.py --batch_size=32 --model=alexnet --data_format=NHWC --device=cpu
+/usr/lib/python3.7/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.6 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.7
+  return f(*args, **kwds)
+2018-10-24 21:48:07.668359: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+TensorFlow:  1.11
+Model:       alexnet
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  32 global
+             32.0 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+W1024 21:48:07.985184 140029210665088 tf_logging.py:125] From /root/wheels/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1888: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+I1024 21:48:08.155207 140029210665088 tf_logging.py:115] Running local_init_op.
+I1024 21:48:08.169584 140029210665088 tf_logging.py:115] Done running local_init_op.
+Running warm up
+Done warm up
+Step	Img/sec	total_loss
+1	images/sec: 30.6 +/- 0.0 (jitter = 0.0)	nan
+10	images/sec: 31.8 +/- 0.2 (jitter = 0.2)	nan
+20	images/sec: 31.8 +/- 0.1 (jitter = 0.3)	nan
+30	images/sec: 31.8 +/- 0.1 (jitter = 0.3)	nan
+40	images/sec: 31.9 +/- 0.1 (jitter = 0.3)	nan
+50	images/sec: 31.8 +/- 0.1 (jitter = 0.3)	nan
+60	images/sec: 31.8 +/- 0.1 (jitter = 0.3)	nan
+70	images/sec: 31.8 +/- 0.1 (jitter = 0.3)	nan
+80	images/sec: 31.8 +/- 0.1 (jitter = 0.3)	nan
+90	images/sec: 31.8 +/- 0.1 (jitter = 0.3)	nan
+100	images/sec: 31.8 +/- 0.0 (jitter = 0.3)	nan
+----------------------------------------------------------------
+total images/sec: 31.82
+----------------------------------------------------------------
+
